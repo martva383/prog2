@@ -1,1 +1,1 @@
-A binfa algoritmust raktam bele az ArgoUML programba.
+A binfa programot raktam bele az ArgoUML programba.

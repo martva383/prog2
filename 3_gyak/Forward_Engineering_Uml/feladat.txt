@@ -1,1 +1,0 @@
-A binfa program UML-jéből generáltam a Binfát.

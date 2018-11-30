@@ -1,0 +1,50 @@
+Mivel a scanf függvény a változó(k)-ban el akarja helyezeni a beolvasott értéket,
+ ezért a változó(k) címeit kell átadni. Ennek a ténynek a részletes magyarázatára
+ késıbbiekben térünk ki ! A változó címét a változó neve elé írt & karakter segítsé-
+ gével tudjuk elıállítani.
+ Amennyiben egyszerre több változóba akarunk értékeket beolvasni, úgy kétféle
+ módszert alkalmazhatunk :
+ 1.) A programban a formátumvezérlı karaktereket vesszıvel választjuk el egy-
+ mástól, és a program futása során a bebillentyőzött értékeket is vesszıvel
+ választjuk el .
+ Példa : int x, y, z ;
+ scanf("%d,%d,%d",&x,&y,&z); esetén
+ a beolvasás a következıképpen történik : 2,3,4 <ENTER> .
+ 
+- 4 -
+2.) A programban a formátumvezérlı karaktereket nem választjuk el egymástól,
+ és a program futása során az egyes bebillentyőzött értékek után lenyomjuk az
+ <ENTER> billentyőt .
+ Példa : int x, y, z ;
+ scanf("%d%d%d",&x,&y,&z); esetén
+ a beolvasás a következıképpen történik : 2 <ENTER>, 3 <ENTER>
+ 4 <ENTEr>
+A formázott adatbeolvasást a scanf függvény segítségével tehetjük meg. A függvény általános formája a következő:
+scanf(formátum,argumentumlista)
+
+A scanf karaktereket olvas a standard bemenetről, majd a formátum alapján értelmezi azokat, és ha a beolvasott karakterek megfelelők, 
+akkor konvertálja őket, és értékül adja a megfelelő változónak.
+A visszatérési érték a sikeresen beolvasott adatok számát adja vissza. 
+
+Az argumentumlista már létező/lefoglalt objektumokra mutató címeket tartalmaz, mégpedig azért, 
+mert a függvény segítségével értéket akarunk adni a már meglévő változóknak.
+
+Az sscanf függvény, amelyet mi is használunk, annyiban tér el az scanf függvénytől, hogy ott meg kell adni, 
+milyen input streamről akarunk olvasni.
+Tehát az scanf függvény az sscanf függvény standard bemeneti olvasással. 
+
+
+
+Miért használjuk?
+A fentiek alapján értelmezhető ,hogy egy konkrét mintailesztést probálunk végrehajtani,illetve egy bizonyos értéket is igyekszünk 
+kinyverni vele
+A felismerendő "kifejezéseket" a shmclient.cpp generálja.
+
+Használhatoság.
+A lexer is segítségünkre van ebben mert ezáltall biztosra leeht tudni,hogx milyen mintára kell illeszteni a bejövö foylamatot.
+Ezért is látunk minden lexer kifejezésben csak 1 db. sscanf függvényt.
+Ekkor már csak a változóknak adunk értéket.
+
+Miért kell ez ?
+Ezeknek a változóknak az értékeit használjuk fel a lexerhez tartozó carlexer.hpp-ben.
+Ebben a carlexer.hpp-ben definiálunk bizonyos függvényeket, amelyek a robotautó projekt szerves részét képezik.

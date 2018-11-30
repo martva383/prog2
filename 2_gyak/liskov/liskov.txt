@@ -1,1 +1,0 @@
-A liskov nevu feladat c++ mukodik, java verzio pedig... folyamatban.

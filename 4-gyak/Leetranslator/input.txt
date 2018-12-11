@@ -1,1 +1,0 @@
-Ez egy leet translator algoritmus itt az input szoveg hogy tesztelni lehessen.
